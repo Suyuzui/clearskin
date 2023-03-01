@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from clearskin import views as skin_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', skin_views.index, name="home")
 ]
