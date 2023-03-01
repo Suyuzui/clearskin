@@ -19,5 +19,5 @@ from clearskin import views as skin_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', skin_views.index, name="home")
+    path('', skin_views.home, name="home"),
 ]
