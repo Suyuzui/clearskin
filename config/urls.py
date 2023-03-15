@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from clearskin import views as views_py
+from authtest.views import HomeView ,UserCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('clear', views_py.home, name="home"),
+    path('', views_py.home, name="home"),
     path('authtest/', include('authtest.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('signup/', UserCreateView.as_view(), name="signup"),
 ]
