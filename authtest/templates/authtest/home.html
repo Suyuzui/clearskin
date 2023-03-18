@@ -9,21 +9,27 @@
     <title>home</title>
 </head>
 <body>
-    <div>
-        <h3>Welcome to our app</h3>
-        {% if user.is_authenticated %}
-        <p>Hi, {{ user.username }}!</p>
-        <a href="{% url 'logout' %}">logout</a>
-        {% else %}
-        <div>
-            <p>If you don't have a account, please sign up below the link.</p>
-            <p><a href="{% url 'signup' %}">signup</a></p>
+    <div id="contents">
+        <div class="left">
+            <p>Hi!</p>
         </div>
-        <div>
-            <p>You are not logged in.</p>
-            <p><a href="{% url 'login' %}">login</a></p>
-        </div>
-        {% endif %} 
+        <div class="right">
+            <h3>Welcome to our app</h3>
+            {% if user.is_authenticated %}
+            <p>Hi, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}">logout</a>
+            {% else %}
+            <div>
+                <p>If you don't have a account, please sign up below the link.</p>
+                <p><a href="{% url 'signup' %}">signup</a></p>
+            </div>
+            <div>
+                <p>You are not logged in.</p>
+                <p><a href="{% url 'login' %}">login</a></p>
+            </div>
+            {% endif %}
+
+        </div> 
     </div>  
 </body>
 </html>

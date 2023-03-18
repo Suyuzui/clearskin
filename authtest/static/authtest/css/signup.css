@@ -1,0 +1,22 @@
+#contents {
+    display: flex;
+    margin: 0%;
+}
+
+.left {
+    background-color: #eeeeee;
+    text-align: center;
+    width: 20%;
+    height: 500px;
+    margin: 0%;
+    padding: 10px;
+}
+
+.right {
+    background-color: #eeeedd;
+    width: 80%;
+    height: 500px;
+    margin: 0%;
+    text-align: center;
+    justify-content: center;
+}
