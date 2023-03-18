@@ -21,7 +21,7 @@ def index(request):
             chat_results=response["choices"][0]["text"]
     else:
         form = ChatForm()
-    template = loader.get_template('clearskin/index.html')
+    template = loader.get_template('authtest/home.html')
     context = {
         'form': form,
         'chat_results': chat_results
