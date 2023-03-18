@@ -3,5 +3,5 @@ from . import views
 
 app_name = "clearskin"
 urlpatterns = [
-    path("", views.index, name="index"),
+    
 ]

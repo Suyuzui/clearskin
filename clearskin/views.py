@@ -8,7 +8,7 @@ from .tests import chat_gpt
 
 
 def home(request):
-    return render(request, 'clearskin/home.html', {})
+    return render(request, 'authtest/home.html', {})
 
 def index(request):
     chat_results=""
@@ -21,7 +21,7 @@ def index(request):
             chat_results=response["choices"][0]["text"]
     else:
         form = ChatForm()
-    template = loader.get_template('authtest/home.html')
+    template = loader.get_template('clearskin/index.html')
     context = {
         'form': form,
         'chat_results': chat_results

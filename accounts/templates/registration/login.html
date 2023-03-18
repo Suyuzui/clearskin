@@ -13,6 +13,7 @@
     <div id="contents">
         <div class="left">
             <p>Hi!</p>
+            <p><a href="{% url 'home' %}">home</a></p>
         </div>
         <div class="right">
             <h3>Login</h3>
@@ -24,7 +25,6 @@
                 {{ form.as_p }}
                 <input type="submit" value="Login"/>
             </form>
-            <p><a href="{% url 'home' %}">home</a></p>
         </div>
     </div>
 </body>

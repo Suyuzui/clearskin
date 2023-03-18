@@ -24,5 +24,5 @@ urlpatterns = [
     path('authtest/', include('authtest.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', UserCreateView.as_view(), name="signup"),
-    path('clearskin/', include('clearskin.urls')),
+    path('clearskin/', views_py.index, name="index"),
 ]
