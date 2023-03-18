@@ -3,10 +3,10 @@ from django.test import TestCase
 # Create your tests here.
 import openai
 
-APK_KEY = ""
+API_KEY = ""
 
 def chat_gpt(prompt):
-    openai.api_key = APK_KEY #API KEYをセット
+    openai.api_key = API_KEY #API KEYをセット
     openai.Model.list() #OpenAIのインスタンスを生成
   
     #APIを使ってリクエストを投げる
