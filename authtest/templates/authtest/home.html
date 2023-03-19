@@ -27,11 +27,11 @@
             {% else %}
             <div>
                 <p>If you don't have a account, please sign up below the link.</p>
-                <p><a href="{% url 'signup' %}">signup</a></p>
+                <button><a href="{% url 'signup' %}">signup</a></button>
             </div>
             <div>
                 <p>You are not logged in.</p>
-                <p><a href="{% url 'login' %}">login</a></p>
+                <button><a href="{% url 'login' %}">login</a></button>
             </div>
             {% endif %}
 
