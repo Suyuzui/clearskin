@@ -1,9 +1,10 @@
 from django.test import TestCase
+from config.settings_fake import SECRET_KEY
 
 # Create your tests here.
 import openai
 
-API_KEY = ""
+API_KEY = SECRET_KEY
 
 def chat_gpt(prompt):
     openai.api_key = API_KEY #API KEYをセット
