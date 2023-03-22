@@ -11,18 +11,18 @@
 <body>
     <div id="contents">
         <div class="left">
-            <p>Hello!</p>
+            <p>{{ user.username }}さんの<br>マイページ</p>
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">logout</a>
             {% else %}
             {% endif %}
         </div>
         <div class="right">
-            <h3>Welcome to our app</h3>
+            <h3>肌キレイにするぞ～！！</h3>
             {% if user.is_authenticated %}
-            <p>Hi, {{ user.username }}!</p>
+            <p>こんにちは, {{ user.username }}さん!</p>
 
-            <p><a href="{% url 'index' %}">check my nutrition facts</a></p>
+            <p><a href="{% url 'index' %}">食事を振り返る</a></p>
 
             {% else %}
             <div>

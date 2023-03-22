@@ -20,8 +20,7 @@
             {% endif %}
        </div>
        <div class="right">
-         <h3>足りない栄養成分はなんだろう？</h3>
-         <p>今日食べた料理を具材まで具体的に書いてください</p>
+         <h3>レシピを提案します</h3>
          <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
@@ -30,8 +29,6 @@
          <div class="chat-results">
             {{ chat_results }} 
          </div>
-
-         <p><a href="{% url 'score' %}">栄養バランスチェック</a></p>
         </div>    
     </div> 
 </body>

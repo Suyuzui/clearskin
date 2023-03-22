@@ -25,4 +25,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', UserCreateView.as_view(), name="signup"),
     path('clearskin/', views_py.index, name="index"),
+    path('recipe/', views_py.recipe, name="recipe"),
+    path('score', views_py.score, name="score"),
+
 ]

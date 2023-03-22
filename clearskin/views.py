@@ -28,3 +28,24 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+def recipe(request):
+    chat_results=""
+    if request.method == "POST":
+        form = ChatForm(request.POST)
+        if form.is_valid():
+            # TODO: ChatGPT処理
+            prompt=form.cleaned_data['prompt']
+            response=chat_gpt(prompt)
+            chat_results=response["choices"][0]["text"]
+    else:
+        form = ChatForm()
+    template = loader.get_template('clearskin/recipe.html')
+    context = {
+        'form': form,
+        'chat_results': chat_results
+    }
+    return HttpResponse(template.render(context, request))
+
+def score(request):
+    return render(request, 'clearskin/score.html', {})
+
