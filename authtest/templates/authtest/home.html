@@ -11,9 +11,10 @@
 <body>
     <div id="contents">
         <div class="left">
-            <p>{{ user.username }}さんの<br>マイページ</p>
             {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">logout</a>
+            <p>{{ user.username }}さんの<br>マイページ</p>
+            <p><a href="{% url 'logout' %}">logout</a></p>
+            <p><a href="{% url 'score' %}">栄養バランスチェック</a></p>
             {% else %}
             {% endif %}
         </div>
@@ -22,7 +23,8 @@
             {% if user.is_authenticated %}
             <p>こんにちは, {{ user.username }}さん!</p>
 
-            <p><a href="{% url 'index' %}">食事を振り返る</a></p>
+            <p><a href="{% url 'index' %}">食事を記録する</a></p>
+            <p><a href="{% url 'recipe' %}">レシピチェック</a></p> 
 
             {% else %}
             <div>
@@ -34,7 +36,6 @@
                 <button><a href="{% url 'login' %}">login</a></button>
             </div>
             {% endif %}
-
         </div> 
     </div>  
 </body>
