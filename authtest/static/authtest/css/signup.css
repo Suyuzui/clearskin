@@ -28,3 +28,10 @@
 .home_right {
     margin: 140px;
 }
+
+.home_right_text {
+    text-align: left;
+}
+.right_btn {
+    text-align: center;
+}
