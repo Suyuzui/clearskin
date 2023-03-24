@@ -12,15 +12,18 @@
 <body> 
     <div id="contents">
         <div class="left">
-            <p>{{ user.username }}さんの<br>マイページ</p>
+            <div class=home_left>
+                <p>{{ user.username }}さんの<br>マイページ</p>
             <p><a href="{% url 'home' %}">home</a></p>
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">logout</a>
             {% else %}
             {% endif %}
        </div>
+    </div>
        <div class="right">
-         <h3>足りない栄養成分はなんだろう？</h3>
+        <div class=home_right>
+            <h3>足りない栄養成分はなんだろう？</h3>
          <p>今日食べた料理を具材まで具体的に書いてください</p>
          <form method="POST">
             {% csrf_token %}
@@ -30,7 +33,7 @@
          <div class="chat-results">
             {{ chat_results }} 
          </div>
-
+        </div>
          <p><a href="{% url 'score' %}">栄養バランスチェック</a></p>
         </div>    
     </div> 

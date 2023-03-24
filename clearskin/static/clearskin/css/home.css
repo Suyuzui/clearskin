@@ -4,19 +4,33 @@
 }
 
 .left {
-    background-color: #eeeeee;
+    background-color: #fa776d;
     text-align: center;
     width: 20%;
-    height: 500px;
+    height: 660px;
     margin: 0%;
     padding: 10px;
 }
 
+.home_left {
+ margin: 20px;
+}
+
 .right {
-    background-color: #eeeeff;
+    background-color: #f3dae4;
     width: 80%;
-    height: 500px;
+    height: 660px;
     margin: 0%;
     text-align: center;
     justify-content: center;
 }
+
+.home_right {
+    margin: 150px;
+}
+/*
+#chart-area{
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+*/

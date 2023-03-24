@@ -5,25 +5,34 @@
 }
 
 .left {
-    background-color: #eeeeee;
+    background-color: #fa776d;
     text-align: center;
     width: 20%;
-    margin: 0;
-    padding: 5px 5px;
+    height: 660px;
+    margin: 0%;
+    padding: 10px;
+}
+
+.home_left {
+ margin: 20px;
 }
 
 .right {
-    background-color: #eeeeff;
+    background-color: #f3dae4;
     width: 80%;
-    height: max-content;
-    margin: 0;
-    padding: 5px 5px;
+    height: 660px;
+    margin: 0%;
     text-align: center;
     justify-content: center;
 }
 
+.home_right {
+    margin: 50px;
+}
+
 .chat-results {
     padding: 30px 30px;
+    margin:50px;
     height: max-content;
     background-color: #eeeeee;
 }
