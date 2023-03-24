@@ -15,7 +15,7 @@
 <body>
     <div id="contents">
         <div class="left">
-            <div class=home_left>
+            <div class="home_left">
                 <p>{{ user.username }}さんの<br>マイページ</p>
                 <p><a href="{% url 'home' %}">home</a></p>
                 {% if user.is_authenticated %}
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="right">
-            <div class=home_right>
+            <div class="home_right">
                 <h3>レシピを提案します</h3>
                 <form method="POST">
                     {% csrf_token %}
@@ -36,9 +36,10 @@
             <div class="chat-results">
                 {{ chat_results }}
             </div>
+            <p><a href="{% url 'score' %}">栄養バランスチェック</a></p>
 
-        </div>
-    </div>
+        </div> 
+    </div> 
 </body>
 
 </html>

@@ -13,13 +13,13 @@
 <body>
     <div id="contents">
         <div class="left">
-            <div class=home_left>
-                <p>Hi!</p>
+            <div class="home_left">
+                <p>こんにちは!</p>
                 <p><a href="{% url 'home' %}">home</a></p>
             </div>
         </div>
         <div class="right">
-            <div class=home_right>
+            <div class="home_right">
                 <h3>Signup</h3>
                 {% if form.errors %}
                 <p>Your username and password didn't match. Please try again.</p>
